@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedInputStream;
@@ -43,14 +44,10 @@ public class Downloader extends AsyncTask<Void, Void, String> {
         progressDialog.setTitle(context.getResources().getString(R.string.Retrieve)+" START");
         progressDialog.setMessage(context.getResources().getString(R.string.PleaseWait));
         //progressDialog.show();
-
-
     }
 
     @Override
     protected String doInBackground(Void... params) {
-
-
         //받아온다.
         return this.downloadData();
 

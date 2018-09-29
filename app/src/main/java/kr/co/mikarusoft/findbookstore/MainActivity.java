@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button upload, list, map;
     private Intent intent;
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         upload = (Button)findViewById(R.id.btnUpload);
         list = (Button)findViewById(R.id.btnList);
         map = (Button)findViewById(R.id.btnMap);
+
+        textView = (TextView)findViewById(R.id.number);
+
+        new DownloaderAsyncforMain(this,"http://kanjangramen999.cafe24.com/bookstore_upload/numberofbooksote.php",textView).execute();
 
         upload.setOnClickListener(this);
         list.setOnClickListener(this);
@@ -62,6 +67,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             finish();
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
     }
 
 }

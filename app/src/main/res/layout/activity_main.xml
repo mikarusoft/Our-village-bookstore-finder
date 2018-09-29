@@ -11,12 +11,24 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/path"
-        android:layout_width="40dp"
-        android:layout_height="23dp"
-        android:text="버튼 :"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="2dp" />
+        android:id="@+id/numberofbookstore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/numberofBookStorefinded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/PleaseWait"
+        app:layout_constraintStart_toEndOf="@+id/numberofbookstore"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnMap"

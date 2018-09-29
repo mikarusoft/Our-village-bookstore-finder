@@ -6,26 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".BookstoreMap">
 
-    <RelativeLayout
-        android:id="@+id/map_view"
+    <WebView
+        android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <WebView
-            android:id="@+id/webview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
-    </RelativeLayout>
+    </WebView>
 
     <Button
-        android:id="@+id/go_to_main"
-        android:layout_width="376dp"
+        android:id="@+id/goto_main"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="처음으로 다시가기"
-        app:layout_constraintBottom_toBottomOf="@+id/map_view"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginBottom="8dp"
+        android:text="@string/go_to_main_text"
+        app:layout_constraintBottom_toBottomOf="@+id/webView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

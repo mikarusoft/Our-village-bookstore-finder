@@ -18,4 +18,9 @@
     <string name="success_button">다음으로 넘어가기</string>
 
     <string name="choose_picture">위 이미지를 설치하시면, 이미지를 선택할 수 있는 화면으로 이동합니다.</string>
+
+    <string name="go_to_main_text">처음으로 다시가기</string>
+
+    <string name="numberofBookStorefinded">등록된 서점수 | </string>
+    <string name="mygpsinfo">나의현재위치</string>
 </resources>
