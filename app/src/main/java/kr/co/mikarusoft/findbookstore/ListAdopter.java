@@ -3,6 +3,7 @@ package kr.co.mikarusoft.findbookstore;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,6 +62,14 @@ public class ListAdopter extends BaseAdapter {
         {
             LayoutInflater inflater =(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.item, parent,false);
+        }
+
+        if (position % 2 == 1)
+        {
+            convertView.setBackgroundColor(Color.parseColor("#726F63"));
+        }
+        else {
+            convertView.setBackgroundColor(Color.parseColor("#4F4044"));
         }
 
 
