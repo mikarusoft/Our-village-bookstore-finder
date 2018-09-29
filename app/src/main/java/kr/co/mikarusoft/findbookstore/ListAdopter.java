@@ -125,6 +125,11 @@ public class ListAdopter extends BaseAdapter {
             public void onClick(View v) {
                 Toast.makeText(context, "Clicked "+position, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, ClickedData.class);
+
+                intent.putExtra("id", items.get(position).getId());
+                intent.putExtra("lng", items.get(position).getGpsLng());
+                intent.putExtra("lat", items.get(position).getGpsLat());
+
                 intent.putExtra("name", items.get(position).getName());
                 intent.putExtra("address", items.get(position).getAddress());
                 intent.putExtra("bookstore_ex", items.get(position).getEx());

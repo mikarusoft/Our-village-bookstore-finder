@@ -106,7 +106,7 @@ public class DataParser extends AsyncTask<Void, Void, Boolean> {
                 String gpsLat = jsonObject.getString("gps_lat");
                 String gpsLng = jsonObject.getString("gps_lng");
 
-                List_Item list_item = new List_Item(null, url, null, null, name, gpsLat, gpsLng, category, bookstore_ex, address);
+                List_Item list_item = new List_Item(id, null, url, null, null, name, gpsLat, gpsLng, category, bookstore_ex, address);
 
                 list_items.add(list_item);
 

@@ -114,6 +114,7 @@ public class BookstoreInfoUploader extends AppCompatActivity implements View.OnC
             public void onClick(View v) {
                 intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

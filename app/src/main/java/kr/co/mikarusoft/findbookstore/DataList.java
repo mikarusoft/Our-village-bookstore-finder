@@ -37,6 +37,7 @@ public class DataList extends ActionBarActivity{
             public void onClick(View v) {
                 intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 

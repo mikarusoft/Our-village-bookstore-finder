@@ -23,8 +23,6 @@ public class BookstoreMap extends AppCompatActivity {
 
     private Button go_to_main;
 
-    private Intent intent;
-
     private GpsInfo gps;
 
     private final int PERMISSIONS_ACCESS_FINE_LOCATION = 1000;
@@ -38,12 +36,17 @@ public class BookstoreMap extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bookstore_map);
 
+        Intent intent = new Intent(this.getIntent());
+
+        String id = intent.getStringExtra("id");
+
         go_to_main = (Button) findViewById(R.id.goto_main);
         go_to_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -58,7 +61,9 @@ public class BookstoreMap extends AppCompatActivity {
             double latitude = gps.getLatitude();
             double longitude = gps.getLongitude();
 
-            url = url+"?lat="+latitude+"&lng="+longitude;
+            url = url+"?lat="+latitude+"&lng="+longitude+"&id="+id;
+
+
 
         } else {
             // GPS 를 사용할수 없으므로

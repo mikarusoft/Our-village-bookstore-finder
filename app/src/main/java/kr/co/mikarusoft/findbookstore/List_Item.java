@@ -9,6 +9,9 @@ import android.graphics.drawable.Drawable;
 
 public class List_Item {
 
+    private String id;
+
+
     private Bitmap bitmapimg;
     private String imgURL;
     private String content;
@@ -23,7 +26,8 @@ public class List_Item {
     private String ex;
     private String address;
 
-    public List_Item(Bitmap bitmapimg, String imgURL, String content, Drawable picture, String name, String gpsLat, String gpsLng, String category, String ex, String address) {
+    public List_Item(String id, Bitmap bitmapimg, String imgURL, String content, Drawable picture, String name, String gpsLat, String gpsLng, String category, String ex, String address) {
+        this.id = id;
         this.bitmapimg = bitmapimg;
         this.imgURL = imgURL;
         this.content = content;
@@ -34,6 +38,14 @@ public class List_Item {
         this.category = category;
         this.ex = ex;
         this.address = address;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public Bitmap getBitmapimg() {

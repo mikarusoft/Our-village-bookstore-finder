@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">FindBookstore</string>
+    <string name="app_name">우리 마을 서점 찾기</string>
     <string name="Retrieve">가져오기</string>
-    <string name="PleaseWait">가져오는 중입니다. 기댜려 주세요</string>
+    <string name="PleaseWait">가져오는 중입니다.</string>
     <string name="Unsuccessful">성공 못함.</string>
     <string name="Unsuccessful_category">카테고리 정보 가져오지 못함.</string>
     <string name="no_info">정보가 없습니다.</string>
@@ -23,4 +23,5 @@
 
     <string name="numberofBookStorefinded">등록된 서점수 | </string>
     <string name="mygpsinfo">나의현재위치</string>
+
 </resources>
