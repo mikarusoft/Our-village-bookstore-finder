@@ -115,7 +115,7 @@ public class ListAdopter extends BaseAdapter {
             nameText.setText((context.getString(R.string.cate_bookstore))+(context.getString(R.string.no_info)));
         }
 
-        String address = list_item.getAddress()+" / "+position+"lat/lng : "+list_item.getGpsLat()+"/"+list_item.getGpsLng();
+        String address = list_item.getAddress();
         if (address != null) {
             addressText.setText(address);
         } else {
